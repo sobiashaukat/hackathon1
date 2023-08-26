@@ -5,7 +5,7 @@ import Image from "next/image";
 import header from "public/header.webp";
 import Baztaar from "/public/Baztar.png";
 import Bustle from "/public/Bustle.png";
-import InStyle from "/public/Instyle.png";
+import InStyle from "/public/InStyle.png";
 import Vercel from "/public/vercel.svg";
 
 const Hero = () => {
