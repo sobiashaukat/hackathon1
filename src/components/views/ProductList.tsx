@@ -6,16 +6,32 @@ import Baztaar from "/public/Baztar.png";
 import Bustle from "/public/Bustle.png";
 import InStyle from "/public/Instyle.png";
 import Vercel from "/public/vercel.svg";
+import { products } from "@/utils/mock";
 
 const ProductList = () => {
+  const productChunks = products.slice(0,3);
+ 
   return (
-    <div>
+   
       <div className="flex justify-evenly mt-16 space-x-3  container">
-        <ProductCard title="abc" price={100} />
-        <ProductCard title="xyz" price={200} />
-        <ProductCard title="jacket" price={1000} />
+
+        {
+         productChunks.map((products) =>(
+          <ProductCard key={products.id}
+           title={products.name} 
+            price={products.price}
+            imge={p2}
+             category={products.category}
+              id={products.id}/>
+
+         ))
+        },
+
+        {/* <ProductCard title="abc" price={100} img={p2} />
+        <ProductCard title="xyz" price={200} img={p2} />
+        <ProductCard title="jacket" price={1000} img={p2} /> */}
       </div>
-    </div>
+    
   );
 };
 export default ProductList;
